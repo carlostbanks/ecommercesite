@@ -1,11 +1,7 @@
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-      <h1>Kendrick you ugly</h1>
-      </header>
-    </div>
-  );
+import Home from "./pages/Home"
+
+const App = () => {
+  return <Home></Home>
 }
 
 export default App;
