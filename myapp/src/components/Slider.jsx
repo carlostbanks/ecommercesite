@@ -1,12 +1,12 @@
 import styled from "styled-components"
 import {ArrowLeftOutlined, ArrowRightOutlined } from "@mui/icons-material"
-import styledEngineSc from "@mui/styled-engine-sc"
 
 const Container = styled.div`
 width: 100%;
 height: 100vh;
 display: flex;
 position: relative;
+overflow: hidden;
 `
 
 const Arrow = styled.div`
@@ -29,7 +29,7 @@ const Arrow = styled.div`
 
 const Wrapper = styled.div`
   height: 100%;
-
+  display: flex;
 `
 
 const Slide = styled.div`
@@ -37,27 +37,32 @@ const Slide = styled.div`
   align-items: center;
   width: 100vw;
   height: 100vh;
+  background-color: ${props=>props.bg};
 ` 
 const ImgContainer = styled.div`
-flex: 1;
-height: 100%;
+  flex: 1;
+  height: 100%;
+
 `
 
 const Image = styled.img`
-height: 80%;`
+  height: 80%;
+`
 
 const InfoContainer = styled.div`
-flex: 1;
-padding: 50px;
+  flex: 1;
+  padding: 50px;
 ` 
 
 const Title = styled.h1`
-font-size: 70px;`
+  font-size: 70px;
+`
+
 const Description = styled.p`
-margin: 50px 0px;
-font-size: 20px;
-font-weight: 500;
-letter-spacing: 3px;
+  margin: 50px 0px;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 3px;
 `
 
 const Button = styled.button`
@@ -75,13 +80,35 @@ const Slider = () => {
         <ArrowLeftOutlined/>
       </Arrow>
       <Wrapper>
-        <Slide>
-        <ImgContainer>
-          <Image src="https://www.pngfind.com/pngs/m/52-524008_women-fashion-model-png-transparent-png.png"/>
+        <Slide bg="lightblue">
+        <ImgContainer >
+          <Image src="https://i.postimg.cc/KYbjb1rM/greendress.png"/>
         </ImgContainer>
         <InfoContainer>
           <Title>SUMMER SALE</Title>
           <Description>DON'T WAIT, COME BUY NOW</Description>
+          <Button>SHOP NOW</Button>
+        </InfoContainer>
+        </Slide>
+
+        <Slide bg="lightgreen">
+        <ImgContainer>
+          <Image src="https://i.postimg.cc/nzPnXr7T/reddress.png"/>
+        </ImgContainer>
+        <InfoContainer>
+          <Title>POPULAR SALE</Title>
+          <Description>COME IN TODAY</Description>
+          <Button>SHOP NOW</Button>
+        </InfoContainer>
+        </Slide>
+
+        <Slide bg="lightyellow">
+        <ImgContainer>
+          <Image src="https://i.postimg.cc/8zRkZ1QP/purpledress.png"/>
+        </ImgContainer>
+        <InfoContainer>
+          <Title>AMAZING SALE</Title>
+          <Description>EVERYTHING MUST GO</Description>
           <Button>SHOP NOW</Button>
         </InfoContainer>
         </Slide>
